@@ -1,6 +1,6 @@
 {
     "globalHeaders": {
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "https://orange-meadow-0cee31710.3.azurestaticapps.net",
         "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
         "Access-Control-Allow-Credentials": true,
         "Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token"
