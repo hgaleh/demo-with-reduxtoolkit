@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import { RootState, useAppDispatch } from './state/store';
 import { Alphabet } from './alphabet/Alphabet';
 import {  useSelector } from 'react-redux';

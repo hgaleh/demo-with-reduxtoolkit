@@ -18,7 +18,7 @@ export const Alphabet: React.FC<Props> = ({data}) => {
         }
     }, []);
  
-    return <div>
+    return <div className='alphabet'>
         <div>{data?.letter_index}</div>
         <div>{data?.letter}</div>
     </div>;

@@ -1,0 +1,26 @@
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  & > .select {
+    flex-basis: 150px;
+  }
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  & > .alphabet {
+    flex-basis: 200px;
+    text-align: center;
+    padding: 10px;
+    border: solid 1px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
