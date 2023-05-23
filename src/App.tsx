@@ -31,7 +31,7 @@ function App() {
         })}
       </header>
       <main>
-        {alphabetList.filter(alpha => alpha).map((alpha) => {
+        {alphabetList.map((alpha) => {
           return <Alphabet key={alpha?.index} data={alpha}/>
         })}
       </main>

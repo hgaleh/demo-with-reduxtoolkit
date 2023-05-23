@@ -19,7 +19,8 @@ export const Alphabet: React.FC<Props> = ({data}) => {
     }, []);
  
     return <div className='alphabet'>
-        <div>{data?.letter_index}</div>
-        <div>{data?.letter}</div>
+        <div>Select: {data?.index}</div>
+        <div>Letter Index: {data?.letter_index}</div>
+        <div>Letter: {data?.letter}</div>
     </div>;
 };

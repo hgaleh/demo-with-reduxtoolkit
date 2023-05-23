@@ -9,31 +9,29 @@ export type AlphabetType = {
 } | null;
 
 
-const initialState: AlphabetType[] = [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
-];
+const initialState: AlphabetType[] = [];
 
 export const rootSlice = createSlice({
   name: 'root',
   initialState,
   reducers: {
     selectOrDeselect: (state, action: PayloadAction<{ index: number, isActive: boolean }>) => {
-        state[action.payload.index] = action.payload.isActive ? {
-            letter: '',
-            letter_index: 0,
-            index: action.payload.index
-        } : null;
+        if (action.payload.isActive) {
+            state.push({
+                letter: '',
+                letter_index: 0,
+                index: action.payload.index
+            })
+        } else {
+            const indexToBeRemoved = state.findIndex(alph => alph?.index === action.payload.index);
+            state.splice(indexToBeRemoved, 1);
+        }
     }
   },
   extraReducers: (builder) => {
     builder.addCase(fetchAlphabet.fulfilled, (state, action) => {
-        state[action.payload.index] = {...action.payload.alphabet, index: action.payload.index} as AlphabetType;
+        const indexToBeModified = state.findIndex(alph => alph?.index === action.payload.index);
+        state[indexToBeModified] = {...action.payload.alphabet, index: action.payload.index} as AlphabetType;
     });
   }
 });

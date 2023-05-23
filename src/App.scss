@@ -6,6 +6,7 @@ header {
   & > .select {
     flex-basis: 150px;
   }
+  margin-bottom: 10px;
 }
 
 main {
@@ -14,13 +15,14 @@ main {
   justify-content: flex-start;
 
   & > .alphabet {
-    flex-basis: 200px;
-    text-align: center;
+    flex-basis: 240px;
     padding: 10px;
     border: solid 1px;
-    height: 200px;
+    height: 240px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 10px 10px 10px 39px;
+    margin: 0 5px 5px 0;
   }
 }
